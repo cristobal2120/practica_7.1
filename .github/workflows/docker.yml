@@ -1,9 +1,10 @@
 name: Publicar imagen Docker
 
-on: 
+on:
   push:
     branches:
       - main
+  workflow_dispatch:   # 👈 ahora sí está bien ubicado
 
 jobs:
   build-and-push:
@@ -39,5 +40,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            cristobal2120/practica_7.1:latest 
+            cristobal2120/practica_7.1:latest
             ghcr.io/cristobal2120/practica_7.1:latest
